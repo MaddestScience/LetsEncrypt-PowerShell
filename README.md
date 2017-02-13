@@ -10,7 +10,8 @@ This project has been made using the ACMESharp library.
 
 ## Related
 
-For documentation and getting started, go to the [wiki](https://github.com/ebekker/ACMESharp/wiki) which includes the [FAQ](https://github.com/ebekker/ACMESharp/wiki/FAQ).
+For documentation and getting started, go to the [ACMESharp wiki](https://github.com/ebekker/ACMESharp/wiki) which includes the [ACMESharp FAQ](https://github.com/ebekker/ACMESharp/wiki/FAQ).
+
 
 Check out these other related projects:
 
