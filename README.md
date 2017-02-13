@@ -12,7 +12,7 @@ This project has been made using the ACMESharp library.
  * In this directory you make .txt files with the domainname as filename.
  * I.E.:  example.com.txt makes the domain: example.com
  * In this file you specify subdomains, see the [example.com.txt](https://github.com/MaddestScience/LetsEncrypt-PowerShell/blob/master/Central_SSLStore/domains/example.com.txt)
-* Usage: powershell -command letsencrypt.ps1 -option [Verify|Status|CompleteChallenge|GetCert]
+* Usage: powershell -command letsencrypt.ps1 -option [Verify/Status/CompleteChallenge/GetCert]
 
 ## Related
 
