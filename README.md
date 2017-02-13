@@ -10,10 +10,8 @@ This project has been made using the ACMESharp library.
  * You need to follow the first 4 steps.
 * You also need to make the directory: C:\Central_SSLStore\domains\
  * In this directory you make .txt files with the domainname as filename.
-  * I.E.:  example.com
- * In this file you specify subdomains.
-  * I.E.: www 
-  * this makes the domain www.example.com
+  * I.E.:  example.com.txt makes the domain: example.com
+ * In this file you specify subdomains, see the [example.com.txt](https://github.com/MaddestScience/LetsEncrypt-PowerShell/blob/master/Central_SSLStore/domains/example.com.txt)
 
 ## Related
 
