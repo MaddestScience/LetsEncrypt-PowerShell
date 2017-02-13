@@ -16,6 +16,8 @@ $VerbosePreference = 'SilentlyContinue'
 ## Static variables
 $date = Get-Date -format "yyyyMMdd"
 $domainfiles = Get-ChildItem "C:\Central_SSLStore\domains\" -Filter *.txt
+#$option = "Verify"
+
 
 Function Verify(){ 
     Foreach ($domainname in $domainfiles) {
@@ -87,10 +89,10 @@ Function Status(){
         Write-Host "---------------------------------------------------"
         Write-Host ""
         Write-Host "Check ACME Status for $domain"
-        $Cert = (Update-ACMEIdentifier $domain -ChallengeType dns-01).Challenges | Where-Object {$_.Type -eq "dns-01"}
+        $Cert = (Update-ACMEIdentifier $domainalias -ChallengeType dns-01).Challenges | Where-Object {$_.Type -eq "dns-01"}
         $CertStatus = $Cert.Status
         $CertHN = $Cert.HandlerName
-        $Certy = (Update-ACMEIdentifier $domain -ChallengeType dns-01)
+        $Certy = (Update-ACMEIdentifier $domainalias -ChallengeType dns-01)
         Write-Host ""
         Write-Host "Idenitifier:" $Certy.Identifier
         Write-Host "Status:" $Certy.Status
@@ -106,10 +108,10 @@ Function Status(){
             Write-Host "---------------------------------------------------"
             Write-Host ""
             Write-Host "Check ACME Status for $fqdn"
-            $Cert = (Update-ACMEIdentifier $fqdn -ChallengeType dns-01).Challenges | Where-Object {$_.Type -eq "dns-01"}
+            $Cert = (Update-ACMEIdentifier $subdomainalias -ChallengeType dns-01).Challenges | Where-Object {$_.Type -eq "dns-01"}
             $CertStatus = $Cert.Status
             $CertHN = $Cert.HandlerName
-            $Certy = (Update-ACMEIdentifier $fqdn -ChallengeType dns-01)
+            $Certy = (Update-ACMEIdentifier $subdomainalias -ChallengeType dns-01)
             Write-Host ""
             Write-Host "Idenitifier:" $Certy.Identifier
             Write-Host "Status:" $Certy.Status
