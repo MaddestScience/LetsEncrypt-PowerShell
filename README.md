@@ -6,7 +6,14 @@ Get Let's Encrypt certificates by using a PowerShell and some .txt files in a di
 
 This project has been made using the ACMESharp library.
 
-
+* To use this script as-is, you need to install the [ACMESharp PowerShell Module](https://github.com/ebekker/ACMESharp/wiki/Quick-Start).
+ * You need to follow the first 4 steps.
+* You also need to make the directory: C:\Central_SSLStore\domains\
+ * In this directory you make .txt files with the domainname as filename.
+  * I.E.:  example.com
+ * In this file you specify subdomains.
+  * I.E.: www 
+  * this makes the domain www.example.com
 
 ## Related
 
